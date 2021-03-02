@@ -16,31 +16,42 @@ class FrontInitial extends FrontState {
 class JuegoInicialState extends FrontState {
   final String palabra;
   final String titulo;
-  final String contador;
+  final int contador;
 
-  JuegoInicialState(
-    this.palabra,
-    this.titulo,
-    this.contador,
-  );
+  JuegoInicialState({
+    @required this.palabra,
+    @required this.titulo,
+    @required this.contador,
+  });
 
   @override
-  // TODO: implement props
-  List<Object> get props => throw UnimplementedError();
+  List<Object> get props => [palabra, titulo, contador];
 }
 
 class JuegoNextState extends FrontState {
   final String palabra;
   final String titulo;
-  final String contador;
+  final int contador;
 
-  JuegoNextState(
-    this.palabra,
-    this.titulo,
-    this.contador,
-  );
+  JuegoNextState({
+    @required this.palabra,
+    @required this.titulo,
+    @required this.contador,
+  });
 
   @override
-  // TODO: implement props
-  List<Object> get props => throw UnimplementedError();
+  List<Object> get props => [palabra, titulo, contador];
+}
+
+class JuegoEndState extends FrontState {
+  final String titulo;
+  final int contador;
+
+  JuegoEndState({
+    @required this.titulo,
+    @required this.contador,
+  });
+
+  @override
+  List<Object> get props => [ titulo, contador];
 }
