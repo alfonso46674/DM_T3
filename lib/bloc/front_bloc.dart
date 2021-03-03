@@ -36,7 +36,7 @@ class FrontBloc extends Bloc<FrontEvent, FrontState> {
         yield JuegoInicialState(
             palabra: list1[index], titulo: "The word is...", contador: count);
       } else {
-        yield JuegoEndState(titulo: "Your scored", contador: count);
+        yield JuegoEndState(titulo: "Your score", contador: count);
       }
     } else if (event is GotEvent) {
       if (list1[index] == list2[index]) count++;
@@ -47,13 +47,13 @@ class FrontBloc extends Bloc<FrontEvent, FrontState> {
         yield JuegoInicialState(
             palabra: list1[index], titulo: "The word is...", contador: count);
       } else {
-        yield JuegoEndState(titulo: "Your scored", contador: count);
+        yield JuegoEndState(titulo: "Your score", contador: count);
       }
       // yield JuegoNextState(
       //     palabra: list1[index], titulo: "The word is...", contador: count);
     } else if (event is EndEvent) {
       count = 0;
-      yield JuegoEndState(titulo: "Your scored", contador: count);
+      yield JuegoEndState(titulo: "Your score", contador: count);
     }
   }
 }

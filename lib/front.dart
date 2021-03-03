@@ -58,8 +58,9 @@ class VistaInicialWidget extends StatelessWidget {
               flex: 4,
               child: Column(
                 children: [
+                  SizedBox(height: 240,),
                   Text("Get ready to"),
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 40.0,),
                   Text(
                     "Guess the word!",
                     style: TextStyle(fontSize: 30),
