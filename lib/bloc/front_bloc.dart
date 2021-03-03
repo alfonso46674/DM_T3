@@ -10,8 +10,8 @@ part 'front_state.dart';
 class FrontBloc extends Bloc<FrontEvent, FrontState> {
   FrontBloc() : super(FrontInitial());
 
-  List<String> list1 = ["Perro", "Gato"];
-  List<String> list2 = ["Perros", "Gato"];
+  List<String> list1 = ["Perro", "Gato","Arboles","Tienda","Cuarto","Tres"];
+  List<String> list2 = ["Perro", "Gato","Arboles","Tienda","Cuarto","Tres"];
   int count = 0;
   int listSize = 0;
   int index = 0;
@@ -22,6 +22,7 @@ class FrontBloc extends Bloc<FrontEvent, FrontState> {
   ) async* {
     if (event is StartEvent) {
       listSize = list1.length;
+      list2.shuffle();
       index = 0;
       count = 0;
       yield JuegoInicialState(
